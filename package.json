@@ -1,0 +1,44 @@
+{
+  "private": true,
+  "name": "popquiz",
+  "productName": "popquiz",
+  "description": "My super Vue project",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "poi",
+    "build": "poi build",
+    "report": "poi build --bundle-report",
+    "serve": "serve dist --single",
+    "test": "tyu"
+  },
+  "author": {
+    "name": "chrisjbrown",
+    "email": "chrisjosbrown@gmail.com"
+  },
+  "dependencies": {
+    "object-assign": "^4.1.1",
+    "offline-plugin": "^4.8.0",
+    "promise-polyfill": "^6.0.2"
+  },
+  "devDependencies": {
+    "ajv": "^6.0.0",
+    "eslint": "^4.19.1",
+    "node-sass": "^4.9.0",
+    "poi": "^9.0.0",
+    "poi-preset-bundle-report": "^2.0.0",
+    "poi-preset-offline": "^9.0.0",
+    "postcss-syntax": "^0.10.0",
+    "sass-loader": "^7.0.1",
+    "serve": "^6.1.0",
+    "stylelint": "^9.0.0",
+    "stylelint-config-css-modules": "^1.2.0",
+    "stylelint-config-recommended": "^2.1.0",
+    "stylelint-config-standard": "^18.2.0",
+    "tailwindcss": "^0.5.3",
+    "tyu": "^1.0.4",
+    "vue": "^2.x",
+    "vue-template-compiler": "^2.x",
+    "webpack": "^3.0.0"
+  }
+}
