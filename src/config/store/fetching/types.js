@@ -1,0 +1,2 @@
+export const SHOW_FETCHING = 'SHOW_FETCHING'
+export const HIDE_FETCHING = 'HIDE_FETCHING'
