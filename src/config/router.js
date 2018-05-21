@@ -19,13 +19,14 @@ const routes = [
     component: function (resolve) {
       require(['@/components/Questions/Questions.vue'], resolve)
     },
-    beforeEnter: guardQuestions
+    beforeEnter: guardRoute
   },
   {
     path: '/overview',
     component: function (resolve) {
       require(['@/components/Overview/Overview.vue'], resolve)
-    }
+    },
+    beforeEnter: guardRoute
   },
   {
     path: '',
@@ -36,7 +37,7 @@ const routes = [
 ]
 
 // guard route if user hasn't set name and difficulty
-function guardQuestions (to, from, next) {
+function guardRoute (to, from, next) {
   const name = store.getters.name
   const difficulty = store.getters.difficulty
 

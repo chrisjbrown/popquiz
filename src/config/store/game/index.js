@@ -34,13 +34,14 @@ const mutations = {
 
 const getters = {
 	title: state => {
-		if (state.questions.length === 0) {
+		if (state.questions.length === 0 || state.answered === state.questions.length) {
 			return ''
 		}
 		return state.questions[state.answered].question
 	},
+	score: state => state.score,
 	answers: state => {
-		if (state.questions.length === 0) {
+		if (state.questions.length === 0 || state.answered === state.questions.length) {
 			return [];
 		}
 		const game = state.questions[state.answered]
@@ -49,7 +50,7 @@ const getters = {
 		return incorrect_answers;
 	},
 	correct_answer: state => {
-		if (state.questions.length === 0) {
+		if (state.questions.length === 0 || state.answered === state.questions.length) {
 			return undefined
 		}
 		return state.questions[state.answered].correct_answer

@@ -45,10 +45,16 @@
 				'getQuestions'
       ]),
       sendAnswer: function(answer) {
+        // increment/decrement score
         if (answer === this.$store.getters.correct_answer) {
           this.$store.commit(type.QUESTION_CORRECT)
         } else {
           this.$store.commit(type.QUESTION_INCORRECT)
+        }
+
+        // if finished
+        if (this.$store.state.game.answered=== this.$store.state.game.questions.length) {
+          this.$router.push({ path: 'overview' })
         }
       }
 		},
