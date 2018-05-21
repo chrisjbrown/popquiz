@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-8 text-center bg-red min-h-screen">
+  <div class="text-white pt-8 text-center bg-red min-h-screen">
     <h1 v-if="fetching.show">loading questions...</h1>
     <div
       v-else
@@ -26,6 +26,7 @@
       Answers
     },
     beforeRouteEnter(to, from, next) {
+      // TODO - better way to access store here?
 			store.dispatch('getQuestions')
 				.then(() => {
 					next()

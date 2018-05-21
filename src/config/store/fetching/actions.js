@@ -1,8 +1,7 @@
-import Vue from 'vue'
 import * as type from './types'
 
 const actions = {
-	showFetching({ commit }, message){
+	showFetching({ commit }){
 		commit(type.SHOW_FETCHING)
 	},
 

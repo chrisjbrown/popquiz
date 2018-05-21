@@ -1,10 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 
-import App from '../components/App/App.vue'
-import Start from '../components/Start/Start.vue'
-import Questions from '../components/Questions/Questions.vue'
-import Overview from '../components/Overview/Overview.vue'
 import store from './store'
 
 const routes = [

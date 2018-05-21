@@ -22,11 +22,11 @@ const mutations = {
 		state.error = action.error
 	},
 
-	[type.QUESTION_CORRECT](state, action) {
+	[type.QUESTION_CORRECT](state) {
 		state.score++;
 		state.answered++;
 	},
-	[type.QUESTION_INCORRECT](state, action) {
+	[type.QUESTION_INCORRECT](state) {
 		state.score = state.score > 0 ? state.score - 1 : 0;
 		state.answered++
 	}

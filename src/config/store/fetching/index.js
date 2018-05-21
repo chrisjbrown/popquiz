@@ -6,7 +6,7 @@ const state = {
 }
 
 const mutations = {
-	[type.SHOW_FETCHING](state, action) {
+	[type.SHOW_FETCHING](state) {
 		state.show = true;
 	},
 
