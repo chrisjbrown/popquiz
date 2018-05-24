@@ -1,12 +1,12 @@
 <template>
-  <ul>
+  <ul :class="$style.list">
     <li
       v-for="(item, index) in answers"
       :key="index"
+      :class="$style.listItem"
       @click="sendAnswer(item)"
-    >
-      {{ item }}
-    </li>
+      v-html="item"
+    />
   </ul>
 </template>
 
@@ -25,3 +25,6 @@
     },
   }
 </script>
+
+
+<style lang="postcss" module src="./Answers.css"></style>

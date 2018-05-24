@@ -7,24 +7,14 @@ const state = {
 
 const mutations = {
   [type.SET_NAME](state, payload) {
-    Object.assign(state, {
-      name: payload
-    })
+    state.name = payload
   },
   [type.SET_DIFFICULTY](state, payload) {
-    Object.assign(state, {
-      difficulty: payload
-    })
+    state.difficulty = payload
   },
-}
-
-const getters = {
-  name: state => state.name,
-  difficulty: state => state.difficulty,
 }
 
 export default {
   state,
-  mutations,
-  getters
+  mutations
 }

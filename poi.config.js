@@ -24,12 +24,11 @@ module.exports = {
       pluginOptions: {} // Additional options for offline-plugin
     })
   ],
-  webpack: 
-    {
-      resolve: {
-        alias: {
-          vue$: 'vue/dist/vue.js'
-        }
+  webpack: {
+    resolve: {
+      alias: {
+        vue$: 'vue/dist/vue.js'
+      }
     }
   }
 }

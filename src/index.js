@@ -3,7 +3,7 @@ import VueResource from 'vue-resource'
 
 import store from './config/store'
 import router from './config/router'
-import App from './components/App/App.vue'
+import App from './pages/App/App.vue'
 
 Vue.use(VueResource)
 Vue.config.productionTip = false

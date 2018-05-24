@@ -1,4 +1,7 @@
 {
+  "env": {
+    "jest": true
+  },
   "parserOptions": {
     "parser": "babel-eslint",
     "ecmaVersion": 2017,

@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center bg-blue min-h-screen">
+  <div>
     <div class="py-4">
       <img
         :class="$style.logo"
@@ -41,14 +41,6 @@
         >
           {{ difficultyError }}
         </strong>
-        <span v-if="difficulty">
-          <transition
-            name="component-fade"
-            mode="out-in">
-            <component :is="'v-' + difficulty"/>
-          </transition>
-        </span>
-
         <div class="my-3">
           <input
             id="wimpy"
@@ -82,36 +74,28 @@
           <label for="getrekt">Get Rekt</label>
         </div>
       </div>
-      <button
+      <Button
+        title="Start!"
         class="bg-white p-4 border border-black"
-        @click="onStart()"
-      >
-        Start!
-      </button>
+        @onClick="onStart()"
+      />
     </div>
   </div>
 </template>
 
 <script>
   import * as type from '../../config/store/user/types'
+  import Button from '../../components/Button/Button'
 
   export default {
     name: 'Start',
     components: {
-      'v-wimpy': {
-        template: '<div>wimpy</div>'
-      },
-      'v-basic': {
-        template: '<div>basic</div>'
-      },
-      'v-getrekt': {
-        template: '<div>getrekt</div>'
-      }
+      Button
     },
     data: function() {
       return {
-        difficulty: this.$store.getters.difficulty,
-        name: this.$store.getters.name,
+        difficulty: this.$store.state.user.difficulty,
+        name: this.$store.state.user.name,
         nameError: undefined,
         difficultyError: undefined
       }
@@ -126,12 +110,12 @@
         this.$store.commit(type.SET_DIFFICULTY, difficulty)
       },
       onStart: function() {
-        if (!this.$store.getters.name) {
+        if (!this.$data.name) {
           return this.$data.nameError = 'Please fill in a name!'
-        } else if (!this.$store.getters.difficulty) {
+        } else if (!this.$data.difficulty) {
           return this.$data.difficultyError = 'Please select a difficulty!'
         } else {
-          this.$router.push({ path: 'questions' })
+          this.$router.push({ path: 'question' })
         }
       }
     },

@@ -7,20 +7,20 @@ const routes = [
   {
     path: '',
     component: function (resolve) {
-      require(['@/components/Start/Start.vue'], resolve)
+      require(['@/pages/Start/Start.vue'], resolve)
     }
   },
   {
-    path: '/questions',
+    path: '/question',
     component: function (resolve) {
-      require(['@/components/Questions/Questions.vue'], resolve)
+      require(['@/pages/Question/Question.vue'], resolve)
     },
     beforeEnter: guardRoute
   },
   {
     path: '/overview',
     component: function (resolve) {
-      require(['@/components/Overview/Overview.vue'], resolve)
+      require(['@/pages/Overview/Overview.vue'], resolve)
     },
     beforeEnter: guardRoute
   },
@@ -34,8 +34,8 @@ const routes = [
 
 // guard route if user hasn't set name and difficulty
 function guardRoute (to, from, next) {
-  const name = store.getters.name
-  const difficulty = store.getters.difficulty
+  const name = store.state.user.name
+  const difficulty = store.state.user.difficulty
 
   if (!name || !difficulty) {
     next({

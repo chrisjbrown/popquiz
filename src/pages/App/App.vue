@@ -6,15 +6,18 @@
       <Info/>
       <div
         id="app"
+        :class="$style.container"
       >
-        <router-view/>
+        <div class="max-w-md mx-auto">
+          <router-view/>
+        </div>
       </div>
     </div>
   </transition>
 </template>
 
 <script>
-  import Info from '../Info/Info'
+  import Info from '../../components/Info/Info'
   export default {
     name: 'App',
     components: {
@@ -40,3 +43,5 @@
     opacity: 0;
   }
 </style>
+
+<style lang="postcss" module src="./App.css"></style>

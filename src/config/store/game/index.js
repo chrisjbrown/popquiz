@@ -5,7 +5,12 @@ const state = {
 	error: null,
 	questions: [],
 	answered: 0,
-	score: 0
+	score: 0,
+	timer: {
+		'wimpy': 15,
+		'basic': 10,
+		'getrekt': 5,
+	}
 }
 
 const mutations = {
@@ -27,11 +32,19 @@ const mutations = {
 		state.answered++;
 	},
 	[type.QUESTION_INCORRECT](state) {
-		state.score = state.score > 0 ? state.score - 1 : 0;
 		state.answered++
+	},
+	[type.RESTART](state) {
+		state.error = null
+		state.questions = []
+		state.answered = 0
+		state.score = 0
 	}
 }
 
+
+// TODO: need to guard data that hasn't been populated yet
+// a way around this? :(
 const getters = {
 	title: state => {
 		if (state.questions.length === 0 || state.answered === state.questions.length) {
