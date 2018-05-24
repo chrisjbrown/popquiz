@@ -29,10 +29,14 @@ const mutations = {
 
 	[type.QUESTION_CORRECT](state) {
 		state.score++;
-		state.answered++;
+		if (state.answered < state.questions.length) {
+			state.answered++
+		}
 	},
 	[type.QUESTION_INCORRECT](state) {
-		state.answered++
+		if (state.answered < state.questions.length) {
+			state.answered++
+		}
 	},
 	[type.RESTART](state) {
 		state.error = null

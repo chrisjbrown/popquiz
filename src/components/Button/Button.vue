@@ -1,6 +1,7 @@
 <template>
   <button
     :class="$style.button"
+    :disabled="disabled"
     @click="click()"
   >
     {{ title }}
@@ -19,6 +20,11 @@
       onClick: {
         type: String,
         default: '',
+        required: false
+      },
+      disabled: {
+        type: Boolean,
+        default: false,
         required: false
       }
     },
