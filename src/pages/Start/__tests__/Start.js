@@ -16,9 +16,11 @@ it('does not crash', () => {
           }
         }
       },
-      $data: {
-        name: 'blue',
-        difficulty: 'wimpy'
+      data: function() {
+        return {
+          name: 'blue',
+          difficulty: 'wimpy'
+        }
       },
       $style: {}
     },
