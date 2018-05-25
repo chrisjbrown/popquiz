@@ -16,32 +16,35 @@
       class="bg-white mt-8 p-4 border border-black"
       @onClick="pushScore()"
     />
-    <div
-      class="mt-8 flex"
-    >
-      <Scoreboard
-        :scores="scores.wimpy || {}"
-        container-class="bg-yellow-dark mx-2 w-1/3 h-full"
-        name="wimpy"
-      />
-      <Scoreboard
-        :scores="scores.basic || {}"
-        container-class="bg-orange-dark mx-2 w-1/3 h-full"
-        name="basic"
-      />
-      <Scoreboard
-        :scores="scores.getrekt || {}"
-        container-class="bg-red-dark mx-2 w-1/3 h-full"
-        name="getrekt"
-      />
-    </div>
     <div class="mt-8">
-      <h2>Go again?</h2>
-      <Button
-        class="bg-white mt-8 p-4 border border-black"
-        title="restart"
-        @onClick="restart()"
-      />
+      <h1>High Scores</h1>
+      <div
+        class="mt-8 flex"
+      >
+        <Scoreboard
+          :scores="scores.wimpy || {}"
+          container-class="bg-yellow-dark mx-2 w-1/3 h-full"
+          name="wimpy"
+        />
+        <Scoreboard
+          :scores="scores.basic || {}"
+          container-class="bg-orange-dark mx-2 w-1/3 h-full"
+          name="basic"
+        />
+        <Scoreboard
+          :scores="scores.getrekt || {}"
+          container-class="bg-red-dark mx-2 w-1/3 h-full"
+          name="getrekt"
+        />
+      </div>
+      <div class="mt-8">
+        <h2>Go again?</h2>
+        <Button
+          class="bg-white mt-8 p-4 border border-black"
+          title="restart"
+          @onClick="restart()"
+        />
+      </div>
     </div>
   </div>
 </template>
