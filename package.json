@@ -25,6 +25,7 @@
     "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "@firebase/app-types": "0.x",
     "@vue/test-utils": "^1.0.0-beta.16",
     "ajv": "^6.0.0",
     "babel-eslint": "^8.2.3",
@@ -33,6 +34,7 @@
     "node-sass": "^4.9.0",
     "poi": "^9.0.0",
     "poi-preset-bundle-report": "^2.0.0",
+    "postcss": "^6.0.22",
     "postcss-syntax": "^0.10.0",
     "sass-loader": "^7.0.1",
     "serve": "^6.1.0",
