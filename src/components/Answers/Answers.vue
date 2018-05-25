@@ -1,5 +1,5 @@
 <template>
-  <ul :class="$style.list">
+  <ul class="list-reset">
     <li
       v-for="(item, index) in answers"
       :key="index"
