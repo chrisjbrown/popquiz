@@ -18,11 +18,7 @@ module.exports = {
     ]
   },
   presets: [
-    require('poi-preset-bundle-report')(),
-    require('poi-preset-offline')({
-      pwa: './src/pwa.js', // Path to pwa runtime entry
-      pluginOptions: {} // Additional options for offline-plugin
-    })
+    require('poi-preset-bundle-report')()
   ],
   webpack: {
     resolve: {

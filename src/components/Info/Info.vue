@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-grey w-1/4 absolute">
+  <div class="bg-grey w-auto px-4 absolute">
     <div>
       <span> Name: {{ user.name }}</span>
     </div>

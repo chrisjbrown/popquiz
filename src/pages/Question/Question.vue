@@ -42,7 +42,7 @@
     },
     data() {
       return {
-        timer: this.$store.state.game.timer[this.$store.state.user.difficulty],
+        timer: this.getTimer(),
         interval: 1000
       }
     },
@@ -70,6 +70,18 @@
 			...mapActions([
 				'getQuestions'
       ]),
+      getTimer: function() {
+        switch (this.$store.state.user.difficulty) {
+          case 'wimpy':
+            return 15
+          case 'basic':
+            return 10
+          case 'getrekt':
+            return 5
+          default:
+            return 15
+        }
+      },
       sendAnswer: function(answer) {
         // increment/decrement score
         if (answer === this.$store.getters.correct_answer) {
@@ -88,7 +100,7 @@
         }
       },
       resetTimer: function() {
-        this.timer = this.$store.state.game.timer[this.$store.state.user.difficulty]
+        this.timer = this.getTimer()
       }
     }
   }

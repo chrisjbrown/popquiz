@@ -5,12 +5,7 @@ const state = {
 	error: null,
 	questions: [],
 	answered: 0,
-	score: 0,
-	timer: {
-		'wimpy': 15,
-		'basic': 10,
-		'getrekt': 5,
-	}
+	score: 0
 }
 
 const mutations = {
@@ -61,6 +56,8 @@ const getters = {
 		if (state.questions.length === 0 || state.answered === state.questions.length) {
 			return [];
 		}
+
+		// splice correct answer randomly into array of questions to ask
 		const game = state.questions[state.answered]
 		const incorrect_answers = game.incorrect_answers
 		incorrect_answers.splice(Math.floor(Math.random()*(incorrect_answers.length + 1)), 0, game.correct_answer)

@@ -17,16 +17,15 @@
     "email": "chrisjosbrown@gmail.com"
   },
   "dependencies": {
-    "@vue/test-utils": "^1.0.0-beta.16",
     "firebase": "^5.0.3",
     "object-assign": "^4.1.1",
-    "offline-plugin": "^4.8.0",
     "promise-polyfill": "^6.0.2",
     "vue-resource": "^1.5.1",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.16",
     "ajv": "^6.0.0",
     "babel-eslint": "^8.2.3",
     "eslint": "^4.19.1",
@@ -34,7 +33,6 @@
     "node-sass": "^4.9.0",
     "poi": "^9.0.0",
     "poi-preset-bundle-report": "^2.0.0",
-    "poi-preset-offline": "^9.0.0",
     "postcss-syntax": "^0.10.0",
     "sass-loader": "^7.0.1",
     "serve": "^6.1.0",

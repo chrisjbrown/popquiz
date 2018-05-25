@@ -1,5 +1,4 @@
 import * as type from './types'
-import actions from './actions'
 
 const state = {
 	show: false,
@@ -17,6 +16,5 @@ const mutations = {
 
 export default {
 	state,
-	mutations,
-	actions
+	mutations
 }
