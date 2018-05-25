@@ -1,19 +1,19 @@
 <template>
-  <transition
-    name="component-fade"
-    mode="out-in">
-    <div>
-      <Info/>
-      <div
-        id="app"
-        :class="$style.container"
-      >
-        <div class="max-w-md mx-auto">
+  <div>
+    <Info/>
+    <div
+      id="app"
+      :class="$style.container"
+    >
+      <div class="max-w-md mx-auto">
+        <transition
+          name="component-fade"
+          mode="out-in">
           <router-view/>
-        </div>
+        </transition>
       </div>
     </div>
-  </transition>
+  </div>
 </template>
 
 <script>

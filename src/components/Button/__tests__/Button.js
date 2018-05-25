@@ -1,10 +1,10 @@
-import { shallow } from 'vue-test-utils'
+import { shallowMount } from '@vue/test-utils'
 import Button from '../Button.vue'
 
 describe('Button', () => {
   describe('Click Event', () => {
     it('calls onClick when click on message', () => {
-      const wrapper = shallow(Button, {
+      const wrapper = shallowMount(Button, {
         mocks: {
           $style: {}
         }

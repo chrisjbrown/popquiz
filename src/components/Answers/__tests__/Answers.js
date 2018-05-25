@@ -1,11 +1,11 @@
-import { shallow } from 'vue-test-utils'
+import { shallowMount } from '@vue/test-utils'
 import Answers from '../Answers.vue'
 
 describe('Answers', () => {
   describe('Render', () => {
     it('render two answers', () => {
       const spy = jest.fn()
-      const wrapper = shallow(Answers, {
+      const wrapper = shallowMount(Answers, {
         propsData: {
           sendAnswer: spy,
           answers: ['1', '2']
@@ -20,7 +20,7 @@ describe('Answers', () => {
     })
     it('render four answers', () => {
       const spy = jest.fn()
-      const wrapper = shallow(Answers, {
+      const wrapper = shallowMount(Answers, {
         propsData: {
           sendAnswer: spy,
           answers: ['1', '2', '3', '4']
@@ -37,7 +37,7 @@ describe('Answers', () => {
   describe('Events', () => {
     it('call sendAnswer on click of first answer', () => {
       const spy = jest.fn()
-      const wrapper = shallow(Answers, {
+      const wrapper = shallowMount(Answers, {
         propsData: {
           sendAnswer: spy,
           answers: ['1', '2']
@@ -52,7 +52,7 @@ describe('Answers', () => {
     })
     it('call sendAnswer on click of second answer', () => {
       const spy = jest.fn()
-      const wrapper = shallow(Answers, {
+      const wrapper = shallowMount(Answers, {
         propsData: {
           sendAnswer: spy,
           answers: ['1', '2']

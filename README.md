@@ -26,6 +26,8 @@ State:
 Styling:
 - tailwindcss - for utility styles
 - css-modules - specific component styling
+  - I chose to go with tailwind for basic utility classes margin, padding, width, typography
+  - and use css-modules for specifc styling and scoped component styling
 
 ## Commands
 

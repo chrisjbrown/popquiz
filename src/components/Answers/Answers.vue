@@ -27,4 +27,4 @@
 </script>
 
 
-<style lang="postcss" module src="./Answers.css"></style>
+<style lang="postcss" module scoped src="./Answers.css"></style>
